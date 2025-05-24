@@ -19,7 +19,7 @@ app.use(helmet());
 // CORS configuration
 app.use(cors({
   origin: process.env.NODE_ENV === 'production' 
-    ? ['https://yourdomain.com'] // Replace with your actual domain
+    ? ['https://actual-domain.com']
     : ['http://localhost:3000', 'http://localhost:3001'],
   credentials: true
 }));
