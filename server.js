@@ -88,15 +88,6 @@ app.get('/', (req, res) => {
   });
 });
 
-// 404 handler
-app.use('*', (req, res) => {
-  res.status(404).json({
-    error: 'Endpoint not found',
-    path: req.originalUrl,
-    method: req.method
-  });
-});
-
 // Global error handler
 app.use((error, req, res, next) => {
   console.error('Global error handler:', error);
